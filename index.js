@@ -19,7 +19,6 @@ app.listen(PORTA, () => {
 const listaDeClientes = [
     {id: 1, nome: 'João Silva', email: 'João.silva@example.com' },
     {id: 2, nome: 'Maria Santos', email: 'Maria.santos@example.com' },
-    {id: 3, nomr: 'Pedro Almeida', email: 'Pedro.almeida@example.com' }
 ];
 
 app.get('/clientes', (req, res) => {
@@ -43,7 +42,8 @@ app.post('/clientes', (re1, res) => {
 
     const novoCliente = req.body;
 
-    console.log('Recebemos um novo cliente:', novoCliente);
+    console.log('Criamos um novo cliente:', novoCliente);
 
     res.json({ message: `Cliente ${novoCliente.nome} cadastrado com sucesso!`, data: novoCliente });
 });
+
